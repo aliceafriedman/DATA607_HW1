@@ -2,7 +2,7 @@
 title: "Mushrooms HW1"
 author: "Alice Friedman"
 date: "09/01/2018"
-output: rmarkdown::github_document
+output: html_document
 ---
 
 ```{r setup, include=FALSE}
@@ -89,13 +89,13 @@ head(shrooms)
 tail(shrooms)
 ```
 
-##Graphic exloration of data
+##Graphic exploration of data
 
 Graphing poison_class vs. characteristics subsetted
 ```{r}
 #poison_class vs. odor
 poison_by_odor <-table(shrooms[c(1,3)])
-barplot(poison_by_odor,legend.text=TRUE, beside=TRUE, col=c("light blue","dark orange"), xlab = "Odort",ylab = "Species Count", main="Frequency of Poisonous Mushrooms by Odor")
+barplot(poison_by_odor,legend.text=TRUE, beside=TRUE, col=c("light blue","dark orange"), xlab = "Odor",ylab = "Species Count", main="Frequency of Poisonous Mushrooms by Odor", cex.names=.75)
 
 #poison_class vs. habitat
 poison_by_habitat <-table(shrooms[c(1,4)])
@@ -103,7 +103,7 @@ barplot(poison_by_habitat,legend.text=TRUE, beside=TRUE, col=c("light blue","dar
 
 #poison_class vs. cap_color
 poison_by_habitat <-table(shrooms[c(1,2)])
-barplot(poison_by_habitat,legend.text=TRUE, beside=TRUE, col=c("light blue","dark orange"), xlab = "Cap Color",ylab = "Species Count", main="Frequency of Poisonous Mushrooms by Cap Color")
+barplot(poison_by_habitat,legend.text=TRUE, beside=TRUE, col=c("light blue","dark orange"), xlab = "Cap Color",ylab = "Species Count", main="Frequency of Poisonous Mushrooms by Cap Color", cex.names=.75)
 
 
 ```
